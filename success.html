@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify | Order Confirmed</title>
+  <meta name="description" content="Your Sportify order was submitted successfully.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <main class="success-screen">
+    <div class="success-card">
+      <p class="eyebrow">Order placed</p>
+      <h1>Thank you for your purchase.</h1>
+      <p>We have received your order and will contact you when it ships.</p>
+      <p id="order-id" class="order-ref"></p>
+      <div class="success-actions">
+        <a class="btn-primary" href="/">Back to home</a>
+        <a class="btn-secondary" href="/clothing">Continue shopping</a>
+      </div>
+    </div>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const orderId = params.get('orderId');
+    document.getElementById('order-id').textContent = orderId ? `Order reference: ${orderId}` : 'Your order reference will arrive by email.';
+  </script>
+</body>
+</html>

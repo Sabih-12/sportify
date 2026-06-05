@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify | Checkout</title>
+  <meta name="description" content="Secure checkout for Sportify orders.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="checkout">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">SPORTIFY<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="/clothing">Clothing</a>
+        <a href="/equipment">Equipment</a>
+        <a href="/accessories">Accessories</a>
+      </div>
+      <div class="nav-icons">
+        <button class="icon-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cart-total-price">Rs. 0</span></div>
+        <a class="checkout-btn" id="cart-checkout-btn" href="/checkout" hidden>Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-hero checkout-hero">
+    <div>
+      <p class="eyebrow">Secure order</p>
+      <h1>Checkout</h1>
+      <p>Enter your delivery details and confirm your order. We will send a confirmation to your email.</p>
+    </div>
+  </header>
+
+  <main class="checkout-layout">
+    <section class="checkout-panel">
+      <h2>Delivery details</h2>
+      <form id="checkout-form" class="checkout-form">
+        <label>
+          Full name
+          <input name="fullName" type="text" required>
+        </label>
+        <label>
+          Email address
+          <input name="email" type="email" required>
+        </label>
+        <label>
+          Phone number
+          <input name="phone" type="tel" required>
+        </label>
+        <label class="full-width">
+          Address
+          <input name="address" type="text" required>
+        </label>
+        <label>
+          City
+          <input name="city" type="text" required>
+        </label>
+        <label>
+          Postal code
+          <input name="postalCode" type="text" required>
+        </label>
+        <label>
+          Payment method
+          <select name="paymentMethod" required>
+            <option value="cod">Cash on delivery</option>
+            <option value="card">Card on delivery</option>
+            <option value="wallet">Digital wallet</option>
+          </select>
+        </label>
+        <label class="full-width">
+          Delivery note
+          <textarea name="deliveryNote" rows="4" placeholder="Landmark, apartment, or special instructions"></textarea>
+        </label>
+        <button class="checkout-btn" type="submit">Place order</button>
+        <p id="order-status" class="status-text"></p>
+      </form>
+    </section>
+
+    <aside class="checkout-panel summary-panel">
+      <h2>Order summary</h2>
+      <div id="checkout-summary"></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copy">&copy; 2026 Sportify. Secure checkout.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

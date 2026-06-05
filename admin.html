@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify | Store Admin</title>
+  <meta name="description" content="Sportify store administration — orders and sales insights.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="admin">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">SPORTIFY<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="/">Back to store</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="hero-content">
+      <p class="eyebrow">Store management</p>
+      <h1>ADMIN DASHBOARD</h1>
+      <p>Track orders, update fulfilment status, and review sales performance.</p>
+    </div>
+  </header>
+
+  <main class="page-shell admin-shell">
+    <section id="login" class="checkout-panel admin-panel">
+      <h2>Sign in</h2>
+      <p class="status-text">Staff access only.</p>
+      <div class="admin-form-grid">
+        <label>Email<input id="email" type="email" placeholder="you@sportify.com" autocomplete="username"></label>
+        <label>Password<input id="password" type="password" placeholder="Your password" autocomplete="current-password"></label>
+      </div>
+      <button id="btnLogin" class="btn-primary" type="button">Sign in</button>
+      <p id="loginMsg" class="status-text"></p>
+    </section>
+
+    <section id="dashboard" class="admin-dashboard" style="display:none">
+      <div class="admin-toolbar">
+        <button id="btnRefreshOrders" class="btn-secondary" type="button">Refresh orders</button>
+        <button id="btnRefreshAnalytics" class="btn-secondary" type="button">Refresh insights</button>
+        <button id="btnLogout" class="btn-secondary" type="button">Sign out</button>
+      </div>
+
+      <article class="checkout-panel admin-panel">
+        <h2>Recent orders</h2>
+        <div class="table-wrap">
+          <table id="orders" class="admin-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Customer</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="checkout-panel admin-panel">
+        <h2>Sales insights</h2>
+        <div id="analytics-display">
+          <p class="status-text">Sign in to view sales by category and top products.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copy">&copy; 2026 Sportify · Internal use only</p>
+  </footer>
+
+  <script src="/admin-panel.js"></script>
+</body>
+</html>

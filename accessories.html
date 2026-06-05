@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify | Accessories</title>
+  <meta name="description" content="Shop premium sports accessories at Sportify.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="category" data-category="accessories">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">SPORTIFY<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="/clothing">Clothing</a>
+        <a href="/equipment">Equipment</a>
+        <a href="/accessories">Accessories</a>
+      </div>
+      <div class="nav-icons">
+        <button class="icon-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cart-total-price">Rs. 0</span></div>
+        <a class="checkout-btn" id="cart-checkout-btn" href="/checkout" hidden>Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-hero accent">
+    <div>
+      <h1>Sports Accessories</h1>
+      <p>Useful extras that complete your training kit without slowing you down.</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section>
+      <div class="section-header left">
+        <h2>Shop Accessories</h2>
+        <p>Finish your kit with bottles, bags, grips, and everyday training essentials.</p>
+      </div>
+      <div class="sort-panel">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="price:asc">Price: Low to High</option>
+          <option value="price:desc">Price: High to Low</option>
+          <option value="name:asc">Name: A-Z</option>
+        </select>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p class="footer-copy">&copy; 2026 Sportify. All rights reserved.</p></footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
